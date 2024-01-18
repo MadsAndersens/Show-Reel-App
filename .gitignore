@@ -2,4 +2,4 @@
 /env
 /bin
 /.idea
-
+.DS_Store
