@@ -39,7 +39,6 @@ with col2:
     st.subheader("Soft Skills")
     st.markdown("""
         - Communication
-        - Decisiveness
         - Teamwork
         - Flexibility
     """)
