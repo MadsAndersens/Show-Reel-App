@@ -3,7 +3,9 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier,RandomForestRegressor
 from sklearn.metrics import accuracy_score, mean_squared_error
-from utils.A2_ML_utils import is_categorical
+from utils.A2_ML_utils import is_categorical, export_model
+
+
 
 # Title of the app
 st.title("Machine Learning on custom data-sets")
@@ -50,8 +52,15 @@ if df is not None:
                 model = RandomForestRegressor()
                 model.fit(X_train, y_train)
                 predictions = model.predict(X_test)
-                mse = mean_squared_error(y_test, predictions)
+                mse = round(mean_squared_error(y_test, predictions),2)
                 st.write(f"Regression Mean Squared Error: {mse}")
+
+                # Adding save your model button
+                if st.button("Save Model"):
+                    export_model(model, 'model.pkl')
+                    st.write("Model saved successfully.")
+
+
     else:
         st.write("No numerical columns available in the dataset.")
 
