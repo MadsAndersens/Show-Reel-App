@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Page Configuration
-st.set_page_config(page_title="Mads Andersen - Data Scientist", layout="wide")
+st.set_page_config(page_title="Mads Andersen - Data Scientist", layout="centered")
 
 # Header and Introduction
 st.title("About Mads Andersen")
@@ -65,7 +65,7 @@ st.markdown("""
     - Machine Learning and Data Mining
     - Active Machine Learning and Agency
     - Computer Vision
-    - Reinforcement Learning and control
+    - Data Management and Visualization
 """)
 
 # Work Experience
